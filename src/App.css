@@ -45,6 +45,7 @@ body {
 .layout {
   position: relative;
   margin: 0 auto;
+  max-width: 1720px;
 }
 
 /* ------------------------------------------------------------------------------------------------ */
@@ -178,4 +179,37 @@ body {
 .section01 .txt2 h4{margin-top:215px; font-size: 60px;font-weight: normal;line-height: 1.17;color: #000;}
 .section01 .button-wrap{position: absolute;bottom:0;left:50%;transform: translateX(-50%);}
 .section01 .img{position: absolute;top:98px;left:50%;transform: translateX(-50%);}
+
+
+
+.section02 .layout {
+  overflow: hidden; /* 이 부분을 추가하세요 */
+  height: auto; /* 자동 높이 조절 */
+}
+.section02 {margin-top:135px;padding: 0 0 100px;overflow-x: hidden;}
+
+.section02 .layout .item2 {
+  z-index: 2; /* 중앙 아이템을 다른 아이템보다 위로 올림 */
+  transform: scale(1.2); /* 중앙 아이템을 확대하여 표시 */
+}
+
+/* 나머지 아이템에 대한 스타일 수정 */
+.section02 .layout .item1,
+.section02 .layout .item3,
+.section02 .layout .item4,
+.section02 .layout .item5 {
+  z-index: 1; /* 다른 아이템을 중앙 아이템보다 아래로 내림 */
+  transform: scale(0.8); /* 다른 아이템을 축소하여 표시 */
+}
+
+/* ---------------------------   Footer       ------------------- */
+
+footer{padding:90px 20px;border-top:1px solid #909090;background: #fff;}
+footer .layout{display: flex;justify-content: space-between;}
+footer .left .f-logo{display: inline-block;}
+footer .left .f-logo img{display:block;}
+footer .left p{margin-top:35px; font-size: 14px;font-weight: normal;line-height: 1.43;color: #303030;}
+footer .right{text-align: right;}
+footer .right .instagram{display:inline-block;position:relative;padding-right:23px;font-size: 14px;font-weight: normal;color: #000; padding-bottom: 100px;}
+footer .right copyright{margin-top:90px;display: block;font-size: 12px;font-weight: normal;color: #909090;}
 
